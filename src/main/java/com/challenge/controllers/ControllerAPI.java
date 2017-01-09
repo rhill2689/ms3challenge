@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -17,16 +16,6 @@ import java.util.List;
 
 @RestController
 public class ControllerAPI {
-
-    @GetMapping(value="/")
-    public String index(){
-        return "";
-    }
-
-    @RequestMapping(value = "/api", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public String intro(){
-        return "Hello app";
-    }
 
     @RequestMapping(value="/challenge", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ResponseModel>> postResponse(@RequestBody RequestModel requestModel){
